@@ -140,6 +140,11 @@ public class Spreadsheet
                             int columnValue = v.ToObject<int>();
                             xlsxWriter = xlsxWriter.Write(columnValue);
                         }
+                        else if (v.Type == JTokenType.Float)
+                        {
+                            float columnValue = v.ToObject<float>();
+                            xlsxWriter = xlsxWriter.Write(columnValue);
+                        }
                         else
                         {
                             string columnValue = v.ToString();
